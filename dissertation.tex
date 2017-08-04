@@ -27,6 +27,8 @@
 
 \begin{document}
 
+\listoftodos%
+
 \pagenumbering{roman}
 \pagestyle{headings}
 
@@ -47,14 +49,16 @@ van der Waals interactions}\\
 Jan Hermann\\
 \vfill
 \end{titlepage}
-
-\listoftodos%
+\thispagestyle{empty}
+\cleardoublepage%
 
 \tableofcontents
+\cleardoublepage%
 
 \pagenumbering{arabic}
 
 \input{text.tex}
+\cleardoublepage%
 
 \begingroup
 \renewcommand{\section}[2]{}
