@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper,twoside]{report}
+\usepackage[utf8]{inputenc}
+
+\IfFileExists{minionpro.sty}{
+  \usepackage[lf]{MinionPro}
+  \usepackage[lf]{MyriadPro}
+}{}
+\usepackage{microtype}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks,citecolor=Gray,urlcolor=Gray,linkcolor=Cyan]{hyperref}
+
+\usepackage[sf]{titlesec}
+
+\usepackage[normal]{caption}
+\DeclareCaptionLabelSeparator{pipe}{ $|$ }
+\captionsetup{labelsep=pipe}
+\renewcommand{\captionfont}{\small}
+\renewcommand{\captionlabelfont}{\bfseries}
+
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{abbrvnat}
+\renewcommand\cite{\citep}
+\usepackage{doi}
+
+\input{preamble.tex}
+
+\begin{document}
+
+\pagenumbering{roman}
+\pagestyle{headings}
+
+\nocite{achemso-control}
+
+\begin{titlepage}
+\sffamily
+\centering\Large
+\includegraphics{media/logo-hu.pdf}\\
+\vskip1em\hrule\vskip1em
+\vfill
+Dissertation\\
+\vfill
+\includegraphics{media/logo-mpg.pdf}\\
+\vfill
+{\Huge
+Improved description of \\
+van der Waals interactions}\\
+\vfill
+Jan Hermann\\
+\vfill
+\end{titlepage}
+
+\listoftodos%
+
+\tableofcontents
+
+\pagenumbering{arabic}
+
+\input{text.tex}
+
+\begingroup
+\renewcommand{\section}[2]{}
+\setlength\bibsep{0pt}
+\footnotesize
+\bibliography{refs-zotero,refs}
+\endgroup
+
+\end{document}
