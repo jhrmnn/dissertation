@@ -1,0 +1,31 @@
+DashExcpt = {
+    Kohn--Sham
+    Hohenberg--Kohn
+    Axilrod--Teller--Muto
+    Becke--Johnson
+    Tkatchenko--Scheffler
+    Clausius--Mossotti
+    Hartree--Fock
+    Hellmann--Feynman
+    Adler--Wiser
+    Kramers--Kronig
+    Casimir--Polder
+    Møller--Plesset
+    Langreth--Vosko
+    Lennard--Jones
+    Axilrod--Teller--Muto
+    Lifshitz--Zaremba--Kohn
+    Watson--Crick
+    Monte--Carlo
+    Langreth--Lundqvist
+    Vydrov--Van
+    Tkatchenko--Scheffler
+    Rutgers--Chalmers
+    Green--Kubo
+    Axilrod--Teller
+    tip--substrate
+}
+CmdLine = {
+    --nowarn 3
+    --nowarn 36
+}

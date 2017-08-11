@@ -6,3 +6,8 @@
 \usepackage{todonotes}
 \presetkeys{todonotes}{inline,size=\small}{}
 \usepackage[export]{adjustbox}
+
+% non-numbered chapter in table of contents and headers
+\newcommand\prechapter[1]{
+  \chapter*{#1\markboth{\MakeUppercase{#1}}{}}\addcontentsline{toc}{section}{#1}
+}
