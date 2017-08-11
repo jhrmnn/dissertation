@@ -5,7 +5,7 @@ all: dissertation
 
 dissertation: $(BLDDIR)/dissertation.pdf
 
-$(BLDDIR)/%.pdf: %.tex refs-zotero.bib
+$(BLDDIR)/%.pdf: %.tex refs-zotero.bib | $(BLDDIR)/chapters
 	latexmk -pdf -outdir=$(BLDDIR) -interaction=nonstopmode $<
 
 bib: refs-zotero.bib
@@ -18,5 +18,8 @@ refs-zotero.bib: FORCE
 
 clean:
 	rm -rf $(BLDDIR)
+
+$(BLDDIR)/chapters:
+	mkdir -p $@
 
 FORCE:

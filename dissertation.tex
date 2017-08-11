@@ -1,67 +1,10 @@
-\documentclass[12pt,a4paper,twoside]{report}
-\usepackage[utf8]{inputenc}
-
-\IfFileExists{minionpro.sty}{
-  \usepackage[lf]{MinionPro}
-  \usepackage[lf,medfamily,sansmath]{MyriadPro}
-}{}
-\usepackage[scaled=0.92]{inconsolata}
-\usepackage[T1]{fontenc}
-\usepackage{microtype}
-
-\usepackage[head=15pt]{geometry}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[colorlinks,citecolor=Gray,urlcolor=Gray,linkcolor=Cyan]{hyperref}
-
-\usepackage[sf,small]{titlesec}
-\usepackage[normal]{caption}
-\DeclareCaptionLabelSeparator{pipe}{ $|$ }
-\captionsetup{labelsep=pipe}
-\renewcommand{\captionfont}{\sffamily\small\mathversion{sans}}
-\renewcommand{\captionlabelfont}{\bfseries}
-\usepackage[style=plaintop,font={sf,small}]{floatrow}
-\usepackage{fancyhdr}
-\fancyhf{}
-\fancyhead[LE]{\textsf{
-  \textbf{\thepage}
-  \hspace{2em}
-  {\footnotesize\fontseries{l}\selectfont\leftmark}
-}}
-\fancyhead[RO]{\textsf{
-  {\footnotesize\fontseries{l}\selectfont\rightmark}
-  \hspace{2em}
-  \textbf{\thepage}
-}}
-\renewcommand{\headrulewidth}{0pt}
-\fancypagestyle{plain}{%
-  \fancyhf{}
-  \fancyfoot[LE,RO]{\textsf{\textbf{\thepage}}}
-  \renewcommand{\headrulewidth}{0pt}
-}
-
-\usepackage[sort&compress]{natbib}
-\bibliographystyle{abbrvnat}
-\renewcommand\cite{\citep}
-\usepackage{doi}
+\input{header.tex}
+\pagestyle{fancy}
 
 \input{preamble.tex}
 
-% from fancyhdr documentation: make sure blank pages are truly blank
-\makeatletter
-\def\cleardoublepage{\clearpage
-  \ifodd%
-    \c@page%
-  \else
-    \hbox{}
-    \thispagestyle{empty}
-    \newpage
-  \fi
-}
-\makeatother
-
 \begin{document}
 
-\pagestyle{fancy}
 \pagenumbering{roman}
 
 \listoftodos%
@@ -106,12 +49,23 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Inte
 \tableofcontents
 \cleardoublepage%
 
-\input{0-preface}
+\include{chapters/preface}
 
 \cleardoublepage%
 \pagenumbering{arabic}
 
-\input{1-intro}
+\include{chapters/introduction}
+\include{chapters/electronic-many-body-problem}
+\include{chapters/long-range-electron-correlation}
+\include{chapters/many-body-dispersion}
+\include{chapters/pi-pi-interactions}
+\include{chapters/casimir-interactions}
+\include{chapters/semilocal-and-nonlocal-correlation}
+\include{chapters/polarizability-functionals}
+
+\appendix
+
+\include{chapters/appendix-reproducible-calculations}
 
 \cleardoublepage%
 \begingroup

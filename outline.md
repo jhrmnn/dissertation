@@ -1,4 +1,4 @@
-# Dissertation outline
+# Improved description of van der Waals interactions
 
 ## Introduction
 
@@ -37,7 +37,6 @@ This chapter should be immediately understandable to anyone with an undergrad in
     -   Coulomb interaction
     -   anisotropic gaussian interaction
     -   reciprocal space
--   Study of pi-pi interactions
 -   Comparison to full ACFD and RPA formulations
 -   Macroscopic dielectric constant, Clausius–Mossotti
 -   Real vs imaginary frequencies, MBD spectrum
@@ -46,11 +45,14 @@ This chapter should be immediately understandable to anyone with an undergrad in
     -   Ewald, gamma point, dipole absolute convergence
     -   self-consistency
 
+## pi-pi interactions
+
+## Casimir interactions
+
 ## Semilocal and nonlocal correlation
 
 -   Study of semilocal density functionals
 -   Damping with XC density overlaps
--   Asymptotics: casimir interactions
 
 ## Polarizability functionals
 
