@@ -19,7 +19,7 @@ This chapter should be immediately understandable to anyone with an undergrad in
 -   QMC
 -   Hartre–Fock, quantum chemistry
 -   Density functional theory
--   Adiabatic-connection fluctuation dissipation theorem
+-   Adiabatic-connection fluctuation-dissipation theorem
 -   Range separation
 
 ## Long-range electron correlation

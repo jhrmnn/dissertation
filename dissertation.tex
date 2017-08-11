@@ -1,5 +1,4 @@
 \input{header.tex}
-\pagestyle{fancy}
 
 \input{preamble.tex}
 
@@ -7,47 +6,31 @@
 
 \pagenumbering{roman}
 
-\listoftodos%
-\cleardoublepage%
-
 \newgeometry{margin=3cm,bottom=2cm}
 \begin{titlepage}
 \sffamily\centering
 \hrule
-\vfill
-{\Large Dissertation}\\
-\vfill
-\includegraphics[height=14em]{media/10cpp-c60-cloud.png}\\
-\vfill
-{\Huge\bfseries
-Improved description of \\
-van der Waals interactions}\\
-\vfill
-{\Large Jan Hermann}\\
-\vspace{1em}
-{\large advised by\\
-Prof.\ Dr.\ Alexandre Tkatchenko}
-\vfill
-\includegraphics[height=6em]{media/logo-fhi.pdf}
-\hfill
-\includegraphics[height=6em]{media/logo-hu.pdf}
+\vfill{\Large Dissertation}\\
+\vfill\includegraphics[height=14em]{media/10cpp-c60-cloud.png}\\
+\vfill{\Huge\bfseries Improved description of\\van der Waals interactions}\\
+\vfill{\Large Jan Hermann}\\
+\vspace{1em}{\large advised by\\Prof.\ Dr.\ Alexandre Tkatchenko}
+\vfill\includegraphics[height=6em]{media/logo-fhi.pdf}
+\hfill\includegraphics[height=6em]{media/logo-hu.pdf}
 \end{titlepage}
 \thispagestyle{empty}
 \restoregeometry%
-\clearpage
 
 \vspace*{\fill}
 \begin{center}
 \small
-\includegraphics[height=2.5em]{media/by-sa.pdf}
+\includegraphics[height=2.5em]{media/by-sa.pdf}\\
 \vspace{.5em}
-
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit~\url{http://creativecommons.org/licenses/by-sa/4.0/}.
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+To view a copy of this license, visit~\url{http://creativecommons.org/licenses/by-sa/4.0/}.
 \end{center}
-\cleardoublepage%
 
 \tableofcontents
-\cleardoublepage%
 
 \include{chapters/preface}
 
@@ -63,16 +46,19 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Inte
 \include{chapters/semilocal-and-nonlocal-correlation}
 \include{chapters/polarizability-functionals}
 
+\begingroup
+% \renewcommand{\section}[2]{}
+\setlength\bibsep{0pt}
+\renewcommand\bibname{References}
+\raggedright%
+\footnotesize
+\bibliography{refs-zotero,refs}
+\endgroup
+
 \appendix
 
 \include{chapters/appendix-reproducible-calculations}
 
-\cleardoublepage%
-\begingroup
-\renewcommand{\section}[2]{}
-\setlength\bibsep{0pt}
-\footnotesize
-\bibliography{refs-zotero,refs}
-\endgroup
+\listoftodos%
 
 \end{document}

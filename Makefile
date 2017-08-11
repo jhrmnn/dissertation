@@ -11,10 +11,13 @@ $(BLDDIR)/%.pdf: %.tex refs-zotero.bib | $(BLDDIR)/chapters
 bib: refs-zotero.bib
 
 refs-zotero.bib: FORCE
-	-curl -sfo $@ "http://localhost:23119/better-bibtex/collection?/0/References/dissertation.bibtex&exportNotes=false&useJournalAbbreviation=true" && \
-		gsed -i '/./,$$!d' $@ && \
-		gsed -i 's/an Der {{Waals/an der {{Waals/g' $@ && \
-		gsed -i 's/Otero-de-la-Roza, A./Otero{-}de{-}la{-}Roza, A./g' $@
+	-curl -sfo $@ "http://localhost:23119/better-bibtex/collection?/0/References/dissertation.bibtex&exportNotes=false&useJournalAbbreviation=true" && gsed -f ../utils/clean-zotero-bib.sed -i $@
+
+check_unused:
+	@for key in `grep -h @ refs*.bib | sed 's/@[a-z]\{1,\}{\([^,]\{1,\}\),/\1/'`; \
+		do \
+		[[ -z `grep $$key chapters/*.tex` ]] && echo $$key; \
+		done; :
 
 clean:
 	rm -rf $(BLDDIR)

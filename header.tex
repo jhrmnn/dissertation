@@ -8,19 +8,23 @@
 \usepackage[scaled=0.92]{inconsolata}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
+\usepackage{etoolbox}
 
 \usepackage[head=15pt]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[colorlinks,citecolor=Gray,urlcolor=Gray,linkcolor=Cyan]{hyperref}
 
-\usepackage[sf,small]{titlesec}
+\usepackage{relsize}
+\usepackage{sectsty}
+\allsectionsfont{\smaller\sffamily\mathversion{sansbold}}
 \usepackage[normal]{caption}
 \DeclareCaptionLabelSeparator{pipe}{ $|$ }
 \captionsetup{labelsep=pipe}
 \renewcommand{\captionfont}{\sffamily\small\mathversion{sans}}
-\renewcommand{\captionlabelfont}{\bfseries}
+\renewcommand{\captionlabelfont}{\bfseries\mathversion{sansbold}}
 \usepackage[style=plaintop,font={sf,small}]{floatrow}
 \usepackage{fancyhdr}
+\pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\textsf{
   \textbf{\thepage}
@@ -39,10 +43,11 @@
   \renewcommand{\headrulewidth}{0pt}
 }
 
-\usepackage[sort&compress]{natbib}
+\usepackage[round]{natbib}
 \bibliographystyle{abbrvnat}
 \renewcommand\cite{\citep}
 \usepackage{doi}
+\usepackage[nottoc]{tocbibind}
 
 % from fancyhdr documentation: make sure blank pages are truly blank
 \makeatletter
@@ -56,3 +61,9 @@
   \fi
 }
 \makeatother
+
+% from https://tex.stackexchange.com/questions/41379/automatically-typeset-math-in-section-headings-in-bold-face
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+

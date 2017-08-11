@@ -7,6 +7,7 @@
 \presetkeys{todonotes}{inline,size=\small}{}
 \usepackage[export]{adjustbox}
 
+\newcommand\marginnote[1]{\marginpar{\sffamily\footnotesize #1}}
 % non-numbered chapter in table of contents and headers
 \newcommand\prechapter[1]{
   \chapter*{#1\markboth{\MakeUppercase{#1}}{}}\addcontentsline{toc}{section}{#1}
