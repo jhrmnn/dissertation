@@ -1,1 +1,129 @@
-\chapter{Introduction}
+\chapter{Introduction}\label{chap:intro}
+
+% This chapter should be immediately understandable to anyone with an undergrad in physics or chemistry. It gives background:
+%
+% -   What is the role of vdW interactions in nature and technology: bio, medicine, soft materials, nanomaterials, catalysis
+% -   What are the fundamental physical laws that vdW interactions arise from and why cannot we simply solve those equations (QED, Schrodinger equation, classical electrodynamics). This serves as motivation.
+% -   Terminology: What is the relationship to "noncovalent interactions" and "dispersion", Feynman picture
+% -   What are the common, basic approximations used in this field: relativity, Born-Oppenheimer, temperature
+
+\section{Noncovalent interactions}
+
+All visible matter is made from atoms, the particles composed from very small but heavy and slow nuclei on one hand and light electrons moving at high speeds around the nuclei on the other, mutually attracted by the fundamental electromagnetic force.
+Because the electrons and their motion are governed by the laws of quantum mechanics rather than classical mechanics, they behave more as a swarm of insects attracted to light (with the additional ability to ``teleport''), rather than as planets orbiting stars.
+When atoms of certain elements are arranged in certain ways, they are attracted to each other to form molecules, thin films, liquids, gels, glasses, or crystals.
+These effective forces between atoms, called bonds when strong enough, are a direct result of the fundamental electromagnetic forces between electrons and nuclei.
+A key property of the electromagnetic force in the context of interactions in matter is that it is long-ranged, which means that although it does become weaker for larger distances between atoms, one can always find situations where it can not be neglected even when the atoms are far apart.
+Although there is only one kind of the electromagnetic force between nuclei and electrons that acts in all matter alike, the resulting bonding between atoms can be divided into several distinct categories with characteristic properties.
+Covalent bonds are derived from short-range interactions between localized electrons, and their formation and destruction is responsible for a majority of chemical reactions such as those observed when cooking.
+In contrast, the arrangement of atoms in metals is such that the electrons become delocalized, interacting at short range in such a way that they avoid each other and behave as if they did not interact in the first place (although they do), while also binding the atoms of the metal together.
+Yet another kind of binding occurs when the mean positions of the (negatively charged) electrons are displaced relative to the (positively charged) nuclei, either by hopping to other atoms altogether or by shifting to a certain degree.
+The resulting effective charges then interact via the electrostatic force, either strongly at short distances (ionic bonds) or weakly over long distances.
+Finally, electrons always try to minimize the electric repulsion between them, such that at any given moment, when an electron is to be found on one side of some region of matter, electrons in some other region will be more likely to be found on the opposite side.
+This results in instantaneous effective charges that again interact via the electrostatic force, attracting the two regions together.
+The attractive long-range force, named after Johannes van der Waals,\marginnote{van der Waals\\ force} is present for all possible arrangements of atoms.
+
+As a result of the difference in strength between the four kinds of binding, structures strongly bound by covalent, ionic, and metallic bonds appear under common conditions as relatively stable entities, whose dynamics is governed by the weaker noncovalent interactions, which comprise the long-range electrostatic interactions and the van der Waals (vdW) forces.
+In this way, water molecules are bound into liquid water and ice, sheets of graphene are bound into graphite, two strands of DNA into the DNA helix, linear protein chains into complex 3D structures, molecules of drugs into their crystalline form in tablets, and when a water droplet sits on a glass surface, the water molecules are attracted to the surface by those same forces as well.
+In the temperature range in which life on Earth thrives, most covalent, ionic, and metallic bonds are too strong to be disrupted by the thermal motion of atoms, unless catalysts or enzymes are involved.
+It is often the noncovalent electrostatic and vdW interactions that govern the molecular arrangements under which the catalysts and enzymes become effective.
+This general mechanism directly relates material structure and function, and explains why energetically demanding chemical and biochemical reactions can be often controlled by the much weaker noncovalent interactions.
+
+\section{History and nomenclature}
+
+The first suggestion of some sort of general attractive forces between microscopic particles of matter came from the work on capillary effect and surface tension in 17.\ century, even before the concept of a molecule was properly established.
+Two centuries later, \citet{vanderWaals73} published a doctoral thesis in which he introduced his eponymous equation of state, which improved upon the ideal gas model by assuming a nonzero size of molecules and an unspecified attractive force between them.
+Thanks to its simplicity, yet great predictive power, the equation and the nature of the attractive force in particular became the focus of much research.
+Still before the birth of quantum mechanics, \citet{KeesomPK12a} tried to explain vdW forces in gases as alignment of molecules due to electrostatic interactions between their rigid effective charges.
+\citet{DebyePZ20} argued that such explanation predicts incorrect dependence of the attraction on temperature and molecular structure, and suggested a mechanism in which the effective charges in molecules are not rigid, but induced by other molecules in the system.
+But none of these two theories explained vdW attraction between the symmetric atoms of rare gases, and, as \citet{LondonTFS37} later argued, they lacked explanation for the general ``\emph{parallelism in the different manifestations of the \emph{[van der Waals]} forces}'' such as their ``\emph{identity \emph{[\ldots]} in the liquid with those in the gaseous state; the phenomena of capillarity and of adsorption; the sublimation heat of molecular lattices; certain effects of broadening of spectral lines, etc.}''
+The needed fundamental physical laws were missing at the time, and when \citet{JonesPRSLA24} introduced the famous Lennard-Jones potential between atoms at distance $R$, the attractive component decayed as $1/R^5$ instead of the correct $1/R^6$.
+
+When quantum mechanics was firmly established in the late 1920s, understanding of the motion of electrons in atoms and molecules was perhaps the biggest motivation for its development.
+One of the main results of quantum mechanics was that electrons (charges) in matter do not stop moving even in the lowest energy state, and it turned out to be precisely this movement that is the base of the vdW attraction.
+The first formal quantum-mechanical derivation of long-range attraction between symmetric atoms was done by \citet{WangPZ27} for the case of two hydrogen atoms.
+But it was only \citet{LondonZP30} who generalized the result to any two molecules, and recognized this interaction as the origin of the phenomenological attractive force postulated by Van der Waals.
+Because the strength of the vdW interaction can be calculated from formulas that are similar to those describing optical dispersion (since the underlying electronic motions are of a related kind), the attraction was called the dispersion force.\marginnote{dispersion force}
+\citet{SlaterPR31}
+
+While the true origin of vdW forces was now clear, full understanding of all their manifestations in different materials was nowhere nearer.
+This was in part caused by the limitations of London's description, which were overcome only slowly.
+It took 13 years for \citet{AxilrodJCP43} and \citet{MutoNS43} to independently extend London dispersion from interactions of two to interactions of three atoms or molecules.
+The electric force between electrons is not instant, but travels at the speed of light.
+When two oscillating electrons are further apart than is the wavelength of the light associated with those oscillations, the retarded force becomes out of phase with the oscillations, which makes it weaker.
+\citet{CasimirPR48} realized the implications of this effect for vdW forces and derived the modified $1/R^7$ law that is valid at large separations between interacting bodies.
+It was unfeasible at the time to perform full quantum-mechanical calculations of vdW forces in condensed matter, which lead \citet{LifshitzSPJ56} to derive a phenomenological theory complementary to that of London, based on classical electrodynamics, which did not derive the electronic motions from first principles, but rather postulated and parametrized them based on experimental measurements of material properties.
+All these theoretical developments were eventually cemented also by experiment, when \citet{TaborPRSLA69} were able to directly measure the attractive vdW force between two macroscopic plates, both in the normal and the retarded regime.
+
+Attempts at improved (more general, more accurate) theoretical description of vdW forces went through renaissance in the last two decades, mainly for two reasons:
+First, the known approximations to density-functional theory (DFT)---a method for calculating structure and stability of molecules and materials that became dominant in physics in the 1970s and in chemistry in the 1990s---describe to a good degree all kinds of binding described above except for the vdW force.
+Second, the advances in molecular biology, material design, and nanotechnology have led to studies of larger molecular structures and more heterogeneous materials, in which vdW forces play more important role compared to simpler compounds.
+Some of the many new approaches to vdW forces are formulated fully within DFT, other borrowed ideas from many-body perturbation theory, and yet other from molecular force fields.
+Many of them combine these three approaches in some way.
+At the time of writing this thesis, a general, yet accurate and practical model of vdW forces is still to be found.
+
+As \citeauthor{MargenauRMP39} put it already in \citeyear{MargenauRMP39}, ``\emph{the term `van der Waals force' is not one of very precise usage,}'' and it holds to this date.
+Before 1930, it was a name for the unknown attractive forces responsible for the $a/V_\text m^2$ term in the vdW equation of state.
+Then London derived the force from first principles for the case of two molecules far apart from each other (but not too far), and named it the `dispersion effect'.
+For some, this meant that vdW force \emph{is} the dispersion effect, others understood it as the third in line after the incomplete theories of Keesom (alignment effect) and Debye (induction effect), which all together comprise vdW forces.
+The first use became more prevalent in physics, the other in chemistry.
+Meanwhile, the term `noncovalent interactions' started to be used in biochemistry in the 1960s as an umbrella term for the trio of weaker interactions between (covalently bound) molecules, and began to slowly displace the older term `vdW interactions' in its broad meaning.
+To add to the confusion, `London dispersion' has been often used to denote only the additive second-order part of the attractive force, while it became clear that although often dominant, this level of the theory is not sufficient in many circumstances.
+Furthermore, the retarded regime of the vdW force has been often called the `Casimir force`.
+Given these circumstances, I use the term `vdW force' or `vdW interaction' (rather than dispersion) for the force caused by instantaneous long-range correlation between the motions of electrons, regardless whether in the normal or retarded regime, and `noncovalent interactions' for all intermolecular forces, which \emph{include} the vdW force.
+I avoid the term `dispersion force' and `dispersion interaction'.
+
+\section{Fundamental laws}
+
+The current working theory of the microscopic world that is not in conflict with any known experiment is the so-called Standard Model of elementary particles, which is a particular quantum-field theory, a general framework for quantum theories.
+A subset of the Standard Model that deals with electrons and photons (particles of light) is called the quantum electrodynamics (QED).
+For the calculation of the dipole polarizability of a helium atom, a quantity vastly important for vdW interactions, the difference between the full Standard Model and QED is at tenth significant digit, which is below the resolution of any modern experiment~\cite[see][Table 3.1]{Piela07}.
+In QED, electrons and photons are constantly appearing, interacting, and disappearing excitations of electron and photon fields, which effectively leads to the Coulomb law between electrons, the foundation of description of electricity, and one of the components of Maxwell equations, the classical theory of electrodynamics.
+QED can in principle explain all the vdW effects discussed so far, including the retarded regime, but its equations are too complicated to be solved for anything but the smallest of atoms.
+Quantum field theory, and hence QED as well, arose from reconciliation of quantum mechanics with special relativity: while the macroscopic limit of ordinary quantum mechanics is non-relativistic classical mechanics, the limit of quantum-field theories is relativistic mechanics.
+In ordinary quantum mechanics, which can be considered a non-relativistic approximation to QED, electrons are considered as eternal particles that interact not by exchanging photons, but via a postulated Coulomb law.
+Looking at the polarizability of helium again, the relativistic effects make a difference at fifth significant digit, which, while measurable in this particular case, is inconsequential for any practical vdW effects.
+For this reason, ordinary quantum mechanics is often considered the starting reference fundamental theory of electrons in chemistry and condensed-matter physics.
+(On the other hand, phenomenological models based on classical electrodynamics, which is inherently a relativistic theory, are naturally able to capture retarded vdW forces, where relativistic effects are dominant.)
+In quantum mechanics, a system of particles is described by a wave function,\marginnote{wave function} a complex function of the particle positions whose square gives the probability that the particles will be found in a given configuration.
+The wave function of a particular system is determined by solving the Schrödinger equation.
+In this framework, vdW interactions originate simply from the fact that given any two electrons that are likely to be found around some nuclei, the square of the wave function will be larger when the electrons are on the far sides of the nuclei than when they are on the near sides, which is caused by the mutual Coulomb repulsion between the electrons.
+This imbalance then leads to the nuclei being pushed by their own electrons towards each other rather than apart, and this is the attractive vdW force between atoms.
+
+\section{Approximations}
+
+The previous section established QED as the fundamental theory of electrons, and the Schrödinger equation as a good first-principles starting point, but there is a long string of approximations that need to be made to reduce the description of, say, a physical rod of metal to a solution of the Schrödinger equation for electrons.
+The approximations made when going from QED to ordinary quantum mechanics are fourfold:
+First, the mass of an electron is velocity-dependent under special relativity but not in ordinary quantum mechanics.
+This effect is negligible in small atoms where electrons move slowly compared to the speed of light, but it is strong in heavy nuclei, causing, for example, the yellowish color of gold.
+The same is true for vdW forces, and this type of relativistic effects cannot be neglected when treating heavy atoms from first principles.
+Second, electrons and nuclei have a spin, a purely quantum-mechanical property that is inherently related to magnetism, which is only postulated in ordinary quantum mechanics, while it is a theoretical necessity in QED\@.
+In ordinary quantum mechanics, all spin interactions are either neglected or treated effectively, but luckily spin and magnetism do not seem to influence vdW interactions in a serious way.
+Third, the Coulomb law acting instantaneously is in direct violation of special relativity.
+While this is negligible when the electrons are not too far apart (normal regime), it is of crucial importance for distant electrons (retarded regime).
+These effects cannot be easily incorporated directly into ordinary quantum mechanics, and effective theories therefore resort to its combination with the (inherently relativistic) classical electrodynamics.
+Fourth, in contrast to quantum mechanics vacuum is never truly empty in quantum-field theories, but rather full of virtual particles, a phenomenon called vacuum polarization.
+This effect, while measurable, is fortunately never quantitatively important for vdW interactions.
+
+Even once the description of electrons is reduced to ordinary quantum mechanics, a real molecule or material consists of mutually interacting nuclei and electrons, whose motions are fully coupled.
+But the nuclei are heavier than the electrons by three to four orders of magnitude, so they move much slower than the electrons.
+In the approximation developed by \citet[BO]{BornAP27}, one considers that at any point in time the nuclei are static, and the electrons move in their static electric field.
+This in turn results in electronic clouds around the nuclei that act electrically on them, creating an effective mean-field nuclear force.
+Because of the conservation of energy in a system of nuclei and electrons, the forces on the nuclei can be alternatively obtained from the electronic energy, which, when taken as a function of the nuclear coordinates, is called the potential energy surface (PES).
+The BO approximation can fail either at special nuclear configurations called conical intersections, which are related to electronic excitations, or at very high temperatures that can be found in stars, neither of which is relevant for this thesis.
+Once the BO approximation is applied, the motion of electrons becomes a separate problem that results in a PES, which then serves as an input to another separate problem, that of the nuclei that move on the PES\@.
+The electronic problem directly determines the optical, electric, and magnetic properties of molecules and materials, as well as their photoreactivity.
+The shape of the PES (resulting from the electronic problem) decides about their structure and stability, as well as about most of their thermodynamic properties and chemical reactivity.
+VdW forces are most often manifested via their effect on the PES and the position and motion of the nuclei, but they can also influence directly the electronic properties.
+
+% \section{Open problems}
+%
+% Barring the exceptions mentioned in the previous section, the Schrödinger equation captures all types of binding in molecules and materials: covalent, metallic, electrostatic, and vdW.
+% But the solutions of the equation, if obtainable at all, give only very little intuitive insight into the motions of electrons, which led to the existence of many approximate models that, although not exact or general, provide more understanding.
+% Chemists in particular have developed many different rules of thumb and much intuition about covalent bonding patterns, which enables them to design new molecules and reactions with desired properties.
+% Physicists invented many specific models of electronic motion in metals that are much simpler to solve than the full electronic Schrödinger equation, yet predict target properties with the required accuracy.
+% In this context, modeling and understanding of vdW forces is lacking behind.
+
+% accuracy, generality
+% influence on PES, secondary effects
+% electronic properties
