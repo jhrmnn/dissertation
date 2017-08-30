@@ -1,10 +1,6 @@
 \documentclass[12pt,a4paper,twoside,openright]{report}
 \usepackage[utf8]{inputenc}
 
-\IfFileExists{minionpro.sty}{
-  \usepackage[lf]{MinionPro}
-  \usepackage[lf,medfamily,sansmath]{MyriadPro}
-}{}
 \usepackage[scaled=0.92]{inconsolata}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
@@ -16,12 +12,22 @@
 
 \usepackage{relsize}
 \usepackage{sectsty}
-\allsectionsfont{\smaller\sffamily\mathversion{sansbold}}
 \usepackage[normal]{caption}
 \DeclareCaptionLabelSeparator{pipe}{ $|$ }
 \captionsetup{labelsep=pipe}
-\renewcommand{\captionfont}{\sffamily\small\mathversion{sans}}
-\renewcommand{\captionlabelfont}{\bfseries\mathversion{sansbold}}
+\IfFileExists{minionpro.sty}{
+  \usepackage[lf]{MinionPro}
+  \usepackage[lf,medfamily,sansmath]{MyriadPro}
+  \allsectionsfont{\smaller\sffamily\mathversion{sansbold}}
+  \renewcommand{\captionfont}{\sffamily\small\mathversion{sans}}
+  \renewcommand{\captionlabelfont}{\bfseries\mathversion{sansbold}}
+}{
+  \usepackage{upgreek}
+  \usepackage{sansmath}
+  \allsectionsfont{\smaller\sffamily\sansmath}
+  \renewcommand{\captionfont}{\sffamily\small\sansmath}
+  \renewcommand{\captionlabelfont}{\bfseries}
+}
 \usepackage[style=plaintop,font={sf,small}]{floatrow}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
