@@ -16,11 +16,11 @@
 \DeclareCaptionLabelSeparator{pipe}{ $|$ }
 \captionsetup{labelsep=pipe}
 \IfFileExists{minionpro.sty}{
-  \usepackage[lf]{MinionPro}
+  \usepackage[lf,swash,minionint,openg,footnotefigures]{MinionPro}
   \usepackage[lf,medfamily,sansmath]{MyriadPro}
   \allsectionsfont{\smaller\sffamily\mathversion{sansbold}}
   \renewcommand{\captionfont}{\sffamily\small\mathversion{sans}}
-  \renewcommand{\captionlabelfont}{\bfseries\mathversion{sansbold}}
+  \renewcommand{\captionlabelfont}{\bfseries}
 }{
   \usepackage{upgreek}
   \usepackage{sansmath}
@@ -35,10 +35,10 @@
 \fancyhead[LE]{\textsf{
   \textbf{\thepage}
   \hspace{2em}
-  {\footnotesize\fontseries{l}\selectfont\leftmark}
+  {\footnotesize\mathversion{sans}\leftmark}
 }}
 \fancyhead[RO]{\textsf{
-  {\footnotesize\fontseries{l}\selectfont\rightmark}
+  {\footnotesize\mathversion{sans}\rightmark}
   \hspace{2em}
   \textbf{\thepage}
 }}

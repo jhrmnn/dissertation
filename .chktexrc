@@ -1,30 +1,46 @@
 DashExcpt = {
-    Kohn--Sham
-    Hohenberg--Kohn
+    Adler--Wiser
+    Axilrod--Teller
     Axilrod--Teller--Muto
     Becke--Johnson
-    Tkatchenko--Scheffler
+    Born--Oppenheimer
+    Casimir--Polder
     Clausius--Mossotti
+    Exchange--correlation
+    Green--Kubo
     Hartree--Fock
     Hellmann--Feynman
-    Adler--Wiser
+    Hohenberg--Kohn
+    Kohn--Sham
     Kramers--Kronig
-    Casimir--Polder
-    Møller--Plesset
+    Langreth--Lundqvist
     Langreth--Vosko
     Lennard--Jones
-    Axilrod--Teller--Muto
     Lifshitz--Zaremba--Kohn
-    Watson--Crick
     Monte--Carlo
-    Langreth--Lundqvist
-    Vydrov--Van
-    Tkatchenko--Scheffler
+    Møller--Plesset
     Rutgers--Chalmers
-    Green--Kubo
-    Axilrod--Teller
-    Born--Oppenheimer
+    Tkatchenko--Scheffler
+    Vydrov--Van
+    Watson--Crick
+    exchange--correlation
+    fluctuation--dissipation
+    left--right
     tip--substrate
+    electron--electron
+    charge--mass
+    dipole--dipole
+    dipole--quadrupole
+    host--guest
+    convex--concave
+    buckycatcher--fullerene
+    CPP--C$_{70}$
+    carbon--carbon
+    buckycatcher--C$_{70}$
+    blue--red
+    C--H
+    quadrupole--quadrupole
+    plate--fullerene
 }
 CmdLine = {
     --nowarn 3

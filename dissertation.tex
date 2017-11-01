@@ -7,28 +7,74 @@
 \pagenumbering{roman}
 
 \newgeometry{margin=3cm,bottom=2cm}
+
 \begin{titlepage}
-\sffamily\centering
+\sffamily
 \hrule
-\vfill{\Large Dissertation}\\
-\vfill\includegraphics[height=14em]{media/10cpp-c60-cloud.png}\\
-\vfill{\Huge\bfseries Improved description of\\van der Waals interactions}\\
-\vfill{\Large Jan Hermann}\\
-\vspace{1em}{\large advised by\\Prof.\ Dr.\ Alexandre Tkatchenko}
-\vfill\includegraphics[height=6em]{media/logo-fhi.pdf}
-\hfill\includegraphics[height=6em]{media/logo-hu.pdf}
+\begin{center}
+\vfill{\Large\bfseries Towards unified density-functional model\\of van der Waals interactions}\\
+\vfill\includegraphics[height=10em]{media/10cpp-c60-cloud.png}\\
+\vfill{\large Dissertation}\\[1em]
+zur Erlangung des akademischen Grades \\[0.5em]
+Doctor rerum naturalium \\
+(Dr.\ rer.\ nat.) \\[0.5em]
+im Fach Physik \\
+{\small Spezialisierung: Theoretische Physik} \\[1em]
+eingereicht an der \\
+Mathematisch-Naturwissenschaftlichen Fakultät \\
+der Humboldt-Universität zu Berlin \\[1em]
+von \\[0.5em]
+{\bfseries Mgr.\ \& Bc.\ Jan Hermann} \\[0.5em]
+geboren am 24.\ 4.\ 1989 in Český Krumlov \\[2em]
+{\small Präsidentin der Humboldt-Universität zu Berlin: \\
+Prof.\ Dr.-Ing.\ Dr.\ Sabine Kunst \\[0.5em]
+Dekan der Mathematisch-Naturwissenschaftlichen Fakultät: \\
+Prof.\ Dr.\ Elmar Kulke}
+\end{center}
+\vfill
+\hrule
+\vspace{1cm}
+\begin{tabular}{p{6cm}l}
+Gutachter/innen: & 1. \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots \\
+& 2. \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots \\
+& 3. \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots \\[1em]
+Tag der mündlichen Prüfung: & \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots
+\end{tabular}
 \end{titlepage}
 \thispagestyle{empty}
+
+% \begin{titlepage}
+% \sffamily\centering
+% \hrule
+% \vfill{\Large Dissertation}\\
+% \vfill\includegraphics[height=14em]{media/10cpp-c60-cloud.png}\\
+% \vfill{\Huge\bfseries Towards unified density-functional model of van der Waals interactions}\\
+% \vfill{\Large Jan Hermann}\\
+% \vspace{1em}{\large advised by\\Prof.\ Dr.\ Alexandre Tkatchenko}
+% \vfill\includegraphics[height=6em]{media/logo-fhi.pdf}
+% \hfill\includegraphics[height=6em]{media/logo-hu.pdf}
+% \end{titlepage}
+% \thispagestyle{empty}
 \restoregeometry%
 
+\noindent I declare that I have completed the thesis independently using only the aids and tools specified.
+I have not applied for a doctor's degree in the doctoral subject elsewhere and do not hold a corresponding doctor's degree.
+I have taken due note of the Faculty of Mathematics and Natural Sciences PhD Regulations, published in the Official Gazette of Humboldt-Universität zu Berlin no.\ 126/2014 on 18/11/2014.
+\vspace{1cm}
+
+\noindent Berlin, 1 November 2017\hfill Jan Hermann
 \vspace*{\fill}
 \begin{center}
 \small
-\includegraphics[height=2.5em]{media/by-sa.pdf}\\
+\includegraphics[height=2.5em]{media/by-sa.pdf}
 \vspace{.5em}
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+\noindent This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit~\url{http://creativecommons.org/licenses/by-sa/4.0/}.
 \end{center}
+
+\include{chapters/abstract}
+\include{chapters/zusammenfassung}
 
 \tableofcontents
 
@@ -42,8 +88,8 @@ To view a copy of this license, visit~\url{http://creativecommons.org/licenses/b
 \include{chapters/long-range-electron-correlation}
 \include{chapters/many-body-dispersion}
 \include{chapters/pi-pi-interactions}
-\include{chapters/casimir-interactions}
 \include{chapters/semilocal-and-nonlocal-correlation}
+\include{chapters/casimir-interactions}
 \include{chapters/polarizability-functionals}
 
 \begingroup
@@ -55,10 +101,8 @@ To view a copy of this license, visit~\url{http://creativecommons.org/licenses/b
 \bibliography{refs-zotero,refs}
 \endgroup
 
-\appendix
-
-\include{chapters/appendix-reproducible-calculations}
-
-\listoftodos%
+% \appendix
+%
+% \include{chapters/appendix-reproducible-calculations}
 
 \end{document}
