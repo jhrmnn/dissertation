@@ -28,13 +28,11 @@ For spherically symmetric objects, such as isolated atoms, the quadrupole--quadr
 Here, we derive the quadrupole--quadrupole polarizability of an object defined by a spatial distribution of the dipole polarizability, which is the model represented by any local polarizability functional.
 
 Consider an object with a local polarizability density, $\boldsymbol\alpha(\mathbf r)$, under an influence of an external electric field of the form $\mathbf E(\mathbf r)=\mathbf E'\mathbf r$, $\mathbf E'$ being the (constant) spatial derivative of the field, $\nabla_i E_j(\mathbf r)=E'_{ji}$.
-The field will induce dipole polarization, $\mathbf P=\boldsymbol\alpha\mathbf E'\mathbf r$, which can be represented by a superposition of two constant charge densities of the opposite sign, $\pm q$, shifted microscopically by $\pm\mathbf P(\mathbf r)/2q$ at each point.
-The resulting induced quadrupole moment, $\mathbf Q$, can then be calculated as
+The field will induce dipole polarization, $\mathbf P=\boldsymbol\alpha\mathbf E'\mathbf r$, and the resulting induced quadrupole moment, $\mathbf Q$, can then be calculated as
 \begin{equation}
 \begin{aligned}
-Q_{ij}&=\int\mathrm d\mathbf r\,n(\mathbf r)\tfrac12(3r_i r_j-r^2\delta_{ij}) \\
-&=\sum_\pm\,\pm q\int\mathrm d\mathbf r\,\tfrac12\big[3\big(r_i\pm\tfrac1{2q}P_i(\mathbf r)\big)\big(r_j\pm\tfrac1{2q}P_j(\mathbf r)\big)-\big|\mathbf r\pm\tfrac1{2q}\mathbf P(\mathbf r)\big|^2\delta_{ij}\big] \\
-&=\sum_\pm\,\pm q\int\mathrm d\mathbf r\,\tfrac12\big[3\big(r_i r_j\pm\tfrac1{2q}(r_i P_j(\mathbf r)+r_j P_i(\mathbf r)\!)\big)-\big(r^2\pm\tfrac1q\mathbf r\cdot\mathbf P(\mathbf r)\!\big)\delta_{ij}]\\
+Q_{ij}&=\int\mathrm d\mathbf r\,\Delta n(\mathbf r)\tfrac12(3r_i r_j-r^2\delta_{ij}) \\
+&=\int\mathrm d\mathbf r\,\boldsymbol\nabla\cdot\mathbf P(\mathbf r)\tfrac12(3r_i r_j-r^2\delta_{ij})\qquad\text{(p.p.)} \\
 &=\int\mathrm d\mathbf r\,\tfrac12\big[3\big(r_i P_j(\mathbf r)+r_j P_i(\mathbf r)\!\big)-2{\textstyle\sum_m}r_m P_m(\mathbf r)\delta_{ij}] \\
 &=\sum_{kl}\int\mathrm d\mathbf r\,\tfrac12\big[3\big(r_i r_l\alpha_{jk}(\mathbf r)+r_j r_l\alpha_{ik}(\mathbf r)\!\big)-2{\textstyle\sum_m}r_m r_l\alpha_{mk}(\mathbf r)\delta_{ij}]E'_{kl} \\
 &=\sum_{kl}C_{ijkl}\delta_{ij}E'_{kl}
@@ -154,7 +152,7 @@ To test this hypothesis, we formulate a generalization of the VV functional that
 \begin{equation}
   \alpha_\text{orb}(\mathbf r,\mathrm iu)=\sum_i\frac{f_i|\phi_i(\mathbf r)|^2}{An(\mathbf r)+(B'|\boldsymbol\nabla\phi_i(\mathbf r)|^2/2|\phi_i(\mathbf r)|^2)^2+u^2}
 \end{equation}
-Here, $f_i$ is the occupation number of the $i$-th orbital, $|\phi_i(\mathbf r)|^2$ is its normalized electron density, and $|\boldsymbol\nabla\phi_i(\mathbf r)|^2/2$ its contribution to the KS kinetic energy density of the first kind, $\tau_\text{I}$ (eq.~\ref{eq:kinetic}).
+Here, $f_i$ is the occupation number of the $i$-th orbital, $|\phi_i(\mathbf r)|^2$ is its normalized electron density, and $|\boldsymbol\nabla\phi_i(\mathbf r)|^2/2$ its contribution to the KS kinetic energy density of the second kind, $\tau_\text{II}$ (eq.~\ref{eq:kinetic}).
 To retain the good performance of the VV functional for quadrupole polarizabilities, we keep the parameter $B'$ fixed at the VV value, and optimize $A=1.7$ by minimizing the mean absolute relative error in the polarizabilities.
 Figure~\ref{fig:pol-periodic-table} shows that the new functional, denoted ``orb'', improves upon the VV functional for the $s$- and $d$-block elements, while having the same accuracy for the $p$-block species, both in terms of the dipole polarizabilities and $C_6$ coefficients.
 Compared to the VV functional, the quadrupole polarizabilities are somewhat overestimated for the $s$-block elements, and there are no available reference data for the $d$-block elements.

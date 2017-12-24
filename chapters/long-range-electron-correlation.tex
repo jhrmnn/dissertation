@@ -216,6 +216,8 @@ Given a set of functions, $w_p(\mathbf r)$, that partition a space into fragment
 \begin{equation}
   \boldsymbol\alpha(\mathbf r,\mathbf r',u)=\sum_{pq}w_p(\mathbf r)w_q(\mathbf r')\boldsymbol\alpha(\mathbf r,\mathbf r',u)\equiv\sum_{pq}\boldsymbol\alpha_{pq}(\mathbf r,\mathbf r',u)\rightarrow\alpha_{pq,ll'mm'}
 \end{equation}
+(Here, $l$, $l'$ start from 1, because the expanded quantity is a tensor.
+The corresponding expansion of the scalar density response fucntion, $\chi$, would start from $l=l'=0$.)
 The dipole potential is expanded correspondingly.
 Unlike the Fourier transformation, the multipole expansion is not invertible, but like the Fourier transformation, it introduces a correspondence between spatial integrals and infinite sums,
 \begin{equation}
@@ -459,6 +461,7 @@ Both the resonance frequency and range-separating function of~\eqref{eq:acfd-ker
 The former is the same as in VV09, and the latter is constructed using the same mechanism of reduced polarizabilities of overlapped oscillators as in the original vdW-DF, but in real space,
 \begin{equation}
   f_\text{VV10}(\mathbf r,\mathbf r')=\frac{\alpha_\text{eff}(\mathbf r,\mathrm iu;\omega=\omega_\text{VV09}+Dn^\frac13/|\mathbf r-\mathbf r'|^2)\alpha_\text{eff}(\mathbf r',\mathrm iu;\omega=\omega_\text{VV09}+Dn^\frac13/|\mathbf r-\mathbf r'|^2)}{\alpha_\text{eff}(\mathbf r',\mathrm iu;\omega=\omega_\text{VV09})\alpha_\text{eff}(\mathbf r',\mathrm iu;\omega=\omega_\text{VV09})}
+  \label{eq:damping-vv10}
 \end{equation}
 As $1/|\mathbf r-\mathbf r'|^2$ grows at short distances, the effective resonance frequency of the local oscillators increases, reducing their polarizability.
 The parameter $D$ is used to adjust the range of this mechanism.
@@ -559,7 +562,7 @@ In this scheme, the atomic partition functions, $w_p$, are constructed from radi
   {\sum_q n^\text{free}_q(|\mathbf r-\mathbf R_q|)}
   \label{eq:hirshfeld}
 \end{equation}
-The corresponding static dipole polarizabilities of the atomic fragments are calculated from free-atom dipole polarizabilities, assuming that they scales linearly with the Hirshfeld measure of a volume (Hirshfeld volume),
+The corresponding static dipole polarizabilities of the atomic fragments are calculated from free-atom dipole polarizabilities, assuming that they scale linearly with the Hirshfeld measure of a volume (Hirshfeld volume),
 \begin{gather}
   \alpha_{p1}(0)=\alpha_{p1}^\text{free}(0)\frac{V^\text{Hirsh}_p[n]}{V^\text{Hirsh}_p[n^\text{free}]} \\
   V_p^\text{Hirsh}[n]=\int\mathrm d\mathbf r\,n(\mathbf r)w^\text{Hirsh}_p(\mathbf r)|\mathbf r-\mathbf R_p|^3
@@ -655,7 +658,7 @@ The corresponding Hamiltonian describes a system of distinguishable particles ch
 \end{multline}
 The centers of the harmonic potentials additionally host a compensating charge of the opposite sign.
 If the centers are the same as those of the atoms, this Hamiltonian can be interpreted as a very crude approximation to the electronic Hamiltonian, in which all electrons of individual atoms are described by distinguishable psuedoelectrons that move in an effective potential which is the combined result of the nuclear potential and the mean field of the electrons.
-In particular, any exchange effects and hence charge transfer and delocalization are scraped.
+In particular, any exchange effects and hence charge transfer and delocalization are scrapped.
 Expanding the Coulomb operator in a multipole series and keeping only the dipole term results in dipole-coupled oscillator Hamiltonian,
 \begin{equation}
   \hat H_\text{dosc}=\sum_i\frac{\mathbf{\hat p}_i^2}2+\sum_i\frac12 m_i\omega_i^2|\mathbf{\hat r}_i-\mathbf R_i|^2+\sum_{i<j}q_i q_j(\mathbf{\hat r}_i-\mathbf R_i)\mathbf T(\mathbf R_j-\mathbf R_i)(\mathbf{\hat r}_j-\mathbf R_j)
@@ -663,7 +666,7 @@ Expanding the Coulomb operator in a multipole series and keeping only the dipole
 \end{equation}
 
 A useful property of this Hamiltonian is that it can be solved exactly by coordinate transformation.
-Introducing mass-scaled coordinates, $\hat{\boldsymbol\xi}_i=\sqrt{m_i}(\mathbf{\hat r}_i-\mathbf R_i)$, $\hat{\boldsymbol\xi}=(\hat{\boldsymbol\xi}_1\hat{\boldsymbol\xi}_2\ldots)$, using the expression for the polarizability of a charge harmonic oscillator in~\eqref{eq:osc-pol}, and the fact that the kinetic-energy operator is invariant with respect to unitary transformations, the dipole-coupled Hamiltonian can be transformed into uncoupled quasi oscillators,
+Introducing mass-scaled coordinates, $\hat{\boldsymbol\xi}_i=\sqrt{m_i}(\mathbf{\hat r}_i-\mathbf R_i)$, $\hat{\boldsymbol\xi}=(\hat{\boldsymbol\xi}_1\hat{\boldsymbol\xi}_2\ldots)$, using the expression for the polarizability of a charged harmonic oscillator in~\eqref{eq:osc-pol}, and the fact that the kinetic-energy operator is invariant with respect to unitary transformations, the dipole-coupled Hamiltonian can be transformed into uncoupled quasi oscillators,
 \begin{equation}
 \begin{aligned}
   \hat H_\text{dosc}&=\sum_i\frac{\mathbf{\hat p}_i^2}2+\sum_i\frac12\omega_i^2\hat{\boldsymbol\xi}_i^2+\frac12\sum_{ij}\omega_i\omega_j\sqrt{\alpha_i(0)\alpha_j(0)}\hat{\boldsymbol\xi}_i\mathbf T_{ij}\hat{\boldsymbol\xi}_j \\

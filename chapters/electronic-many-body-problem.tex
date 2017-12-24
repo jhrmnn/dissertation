@@ -517,7 +517,8 @@ Because larger $\mathbf G$ correspond to ever more rapid changes in real space, 
 Such a truncation of the Fourier transformation corresponds to perhaps the simplest finite one-electron basis for periodic external potentials that can be reasonably efficient when actually used to numerically solve HF or KS equations.
 Since the functions corresponding to a given $\mathbf G$ are plane waves, $\mathrm e^{-\mathrm i\mathbf G\cdot\mathbf r}$, the computer programs that calculate the electronic structure of crystals in this way are usually referred to as plane-wave codes.
 
-There is no reasonable cutoff when the functions being transformed are discrete, say, over atoms positions, $\mathbf R_i$, $A(\mathbf r,\mathbf r')=\sum_{\mathbf Ri,\mathbf R'j}\delta(\mathbf r-\mathbf R-\mathbf R_i)\delta(\mathbf r'-\mathbf R'-\mathbf R_j)A_{\mathbf R+\mathbf R_i,\mathbf R'+\mathbf R_j}$.
+There is no reasonable cutoff when the functions being transformed are discrete, say, over atoms positions, $\mathbf R_i$, $A(\mathbf r,\mathbf r')=\sum_{\mathbf R\mathbf R'}\sum_{ij}\delta(\mathbf r-\mathbf R-\mathbf R_i)\delta(\mathbf r'-\mathbf R'-\mathbf R_j)A_{\mathbf R+\mathbf R_i,\mathbf R'+\mathbf R_j}$.
+($\mathbf R$, $\mathbf R'$ are lattice vectors.)
 In such case, it is convenient to define the Fourier transformation of the individual discrete points,
 \begin{equation}
 \begin{aligned}
