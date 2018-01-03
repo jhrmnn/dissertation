@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper,twoside,openright]{report}
+\usepackage[a-1b]{pdfx}
 \usepackage[utf8]{inputenc}
 
 \usepackage[scaled=0.92]{inconsolata}
@@ -8,7 +9,12 @@
 
 \usepackage[head=15pt]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[colorlinks,citecolor=Gray,urlcolor=Gray,linkcolor=Cyan]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,citecolor=Gray,urlcolor=Gray,linkcolor=Blue,
+  bookmarksnumbered=true,
+  pdflang={en-US}
+}
 
 \usepackage{relsize}
 \usepackage{sectsty}
